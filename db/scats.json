@@ -1,0 +1,45 @@
+{
+  "scats": {
+    "scat1": {
+      "location" : "NSS",
+      "weight" : "10g",
+      "color" : "brown",
+      "sampleNum" : "Toxic Sample #23",
+      "Animal" : "bear",
+      "uid" : "12345"
+    },
+    "scat2": {
+      "location" : "NSS",
+      "weight" : "15g",
+      "color" : "brown",
+      "sampleNum" : "Nashville",
+      "Animal" : "bear",
+      "uid" : "mBoP2Y6v4UM82Z3O5PljhPBMPOg2"
+  },
+  "scat3": {
+    "location" : "NSS",
+    "weight" : "50g",
+    "color" : "brown",
+    "sampleNum" : "lucky",
+    "Animal" : "bear",
+    "uid" : "mBoP2Y6v4UM82Z3O5PljhPBMPOg2"
+},
+"scat4": {
+  "location" : "NSS",
+  "weight" : "35g",
+  "color" : "brown",
+  "sampleNum" : "lovely",
+  "Animal" : "tiger",
+  "uid" : "mBoP2Y6v4UM82Z3O5PljhPBMPOg2"
+},
+"scat5": {
+  "location" : "NSS",
+  "weight" : "80g",
+  "color" : "brown",
+  "sampleNum" : "Toxic Sample #30",
+  "Animal" : "lion",
+  "uid" : "12345"
+
+}
+  }
+}
