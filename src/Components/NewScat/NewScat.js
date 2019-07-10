@@ -1,4 +1,9 @@
 import React from 'react';
+import firebase from 'firebase/app';
+import 'firebase/auth';
+
+import ScatData from '../../helpers/Data/scats';
+
 
 import './NewScat.scss';
 
@@ -31,12 +36,22 @@ class NewScat extends React.Component {
 
   animalChange = e => this.formFieldStringState('animal', e);
 
+  formSubmit = (e) => {
+    e.preventDefault();
+    const saveMe = { ...this.state.newScat };
+    saveMe.uid = firebase.auth().currentUser.uid;
+    console.error('thing to save', saveMe);
+    ScatData.postScat(saveMe)
+      .then(() => this.props.history.push('/home'))
+      .catch(err => console.error('unable to save', err));
+  }
+
   render() {
     const { newScat } = this.state;
     return (
       <div className="NewScat">
         <h1>New Scat</h1>
-        <form>
+        <form onSubmit={this.formSubmit}>
           <div className="form-group">
             <label htmlFor="sampleNum">Sample Name</label>
             <input
