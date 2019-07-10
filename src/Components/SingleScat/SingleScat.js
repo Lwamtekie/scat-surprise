@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ScatData from '../../helpers/Data/scats';
 import './SingleScat.scss';
 
@@ -25,6 +26,7 @@ class SingleScat extends React.Component {
 
   render() {
     const { scat } = this.state;
+    const editLink = `/edit/${this.props.match.params.id}`;
     return (
      <div className="SingleScat">
        <h1>{scat.sampleNum}</h1>
@@ -32,6 +34,7 @@ class SingleScat extends React.Component {
        <h1>{scat.color}</h1>
        <h1>{scat.weight}</h1>
        <h1>{scat.Animal}</h1>
+       <Link className="btn btn-primary" to={editLink}>Edit</Link>
        <button className="btn btn-danger" onClick={this.deleteScat}>Delete</button>
      </div>
     );
